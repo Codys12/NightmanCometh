@@ -28,13 +28,6 @@ contract('NightManToken', function(accounts) {
         assert(balance.toNumber() < 1000000);
     });
 
-    it('Should refund the same amount of ETH put in', async () => {
-        const token = await NightManToken.deployed();
-        const preBalance = web3.eth.getBalance(accounts[0]);
-        await token.purchaseTokens({from: accounts[0], value: 1000});
-        await token.exchangeTokens(accounts[0],1000000);
-        assert(web3.eth.getBalance(accounts[0] == preBalance));
-    });
 
 });
 
