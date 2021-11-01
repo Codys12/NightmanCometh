@@ -10,7 +10,7 @@ contract NightManToken is ERC20{
     uint256 maxCombinedSupply = 1000000*10**decimals();
     
     
-    constructor() ERC20("NightManToken","NMCX"){
+    constructor() ERC20("NightManToken","NMTX"){
         _totalBurned = maxCombinedSupply / 2;
         dayManToken = new DayManToken( payable(address(this)) );
 
